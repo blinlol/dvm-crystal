@@ -157,7 +157,6 @@ class DVMHDataCollector:
         # Копируем исходный файл
         source_file = os.path.join(source_dim_dir, filename)
         dest_file = os.path.join(file_dir_path, filename)
-        
         if not self._copy_source_file(source_file, dest_file, output_log_file):
             return False
         
@@ -215,6 +214,16 @@ class DVMHDataCollector:
         result = run_command(run_prog_cmd, check=False, output_file=output_log_file)
         if result is False:
             self.logger.warning(f"Ошибка выполнения программы {filename}")
+            
+            
+        gcno_file = f'./{file_name}.gcno'
+        gcno_dest = os.path.join(file_dir_path, f'{file_name}.gcno')
+        self.copy_and_remove(gcno_file, gcno_dest, output_log_file)
+        
+        gcda_file = f'./{file_name}.gcda'
+        gcda_dest = os.path.join(file_dir_path, f'{file_name}.gcda')
+        self.copy_and_remove(gcda_file, gcda_dest, output_log_file)
+        
         
         # 3. Генерация отчета покрытия
         gcov_cmd = f'gcov -b "{dest_file}"'

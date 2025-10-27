@@ -5,10 +5,10 @@ data_collection:
   problems_directory: "./problems"
   
   # Путь к SAPFOR
-  sapfor_executable: "../SAPFOR/_bin/Release/Sapfor_F.exe"
+  sapfor_executable: "Sapfor_F"
   
   # Размерности программ для обработки
-  dimensions: ["1d", "2d", "3d", "4d"]
+  dimensions: ["1d"]
   
   # Поддерживаемые расширения файлов
   file_extensions: [".f", ".f90"]

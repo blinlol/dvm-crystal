@@ -4,7 +4,10 @@ import os
 import argparse
 import sys
 from datetime import datetime
+import pandas as pd
 
+
+from src.model_trainer import DVMHModelTrainer        
 from src.utils import setup_logging
 from src.data_collector import DVMHDataCollector
 from src.stats_aggregator import DVMHStatsAggregator
@@ -222,9 +225,6 @@ def mode_train(args):
         return 1
     
     try:
-        import pandas as pd
-        from src.model_trainer import DVMHModelTrainer
-        
         # Загружаем датасет
         logger.info(f"Загрузка датасета: {args.dataset}")
         df = pd.read_csv(args.dataset, low_memory=False)

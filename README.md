@@ -1,3 +1,9 @@
+1) запуск в crystal-data
+2) python main.py collect
+3) python main.py aggregate
+4) python main.py features
+
+
 # DVMH Performance Predictor
 
 Система машинного обучения для предсказания эффективности параллельных программ с использованием технологии DVMH (Distributed Virtual Memory Hierarchy).

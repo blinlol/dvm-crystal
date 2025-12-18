@@ -11,6 +11,15 @@
             "program": "${workspaceFolder}/main.py",
             "console": "integratedTerminal",
             "args": "collect"
-        }
+        },
+        {
+            "name": "agggregate",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "args": "aggregate"
+        },
+        
     ]
 }

@@ -1,6 +1,6 @@
 data_collection:
   # Директории по умолчанию
-  default_source_dir: "./sources"
+  default_source_dir: "../dvm-crystal-data/data"
   results_directory: "./data/raw"
   problems_directory: "./problems"
   
@@ -35,3 +35,6 @@ data_collection:
   logging:
     level: "INFO"
     format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+data_aggregation:
+  results_directory: ../dvm-crystal-data/results

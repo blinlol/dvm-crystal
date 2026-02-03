@@ -58,13 +58,13 @@ def setup_argument_parser():
     collect_group = parser.add_argument_group('collect', 'Аргументы для сбора данных')
     collect_group.add_argument(
         '--source',
-        default='./sources',
-        help='Директория с исходными программами (по умолчанию: ./sources)'
+        default=None,
+        help='Директория с исходными программами (по умолчанию берется из config)'
     )
     collect_group.add_argument(
         '--results',
-        default='./data/raw',
-        help='Директория для сохранения результатов (по умолчанию: ./data/raw)'
+        default=None,
+        help='Директория для сохранения результатов (по умолчанию берется из config)'
     )
     
     # Аргументы для режимов aggregate и features
@@ -106,23 +106,28 @@ def mode_collect(args):
     logger.info("=== РЕЖИМ: Сбор данных покрытия ===")
     
     collector = DVMHDataCollector(args.config)
+    collection_cfg = collector.config.get('data_collection', {})
+    source_dir = args.source or collection_cfg.get('default_source_dir', './sources')
+    results_dir = args.results or collection_cfg.get('results_directory', './data/raw')
+    logger.info(f"Используется директория исходников: {source_dir}")
+    logger.info(f"Директория результатов: {results_dir}")
     
     # Проверяем существование исходной директории
-    if not os.path.exists(args.source):
-        logger.error(f"Исходная директория не найдена: {args.source}")
+    if not os.path.exists(source_dir):
+        logger.error(f"Исходная директория не найдена: {source_dir}")
         return 1
     
     # Запускаем сбор данных
-    success = collector.process_all_programs(args.source, args.results)
+    success = collector.process_all_programs(source_dir, results_dir)
     
     if success:
         logger.info("Сбор данных завершен успешно")
         
         # Очистка результатов (удаление временных файлов)
-        collector.cleanup_results_directories(args.results)
+        collector.cleanup_results_directories(results_dir)
         
         # Сбор проблемных файлов
-        collector.collect_problem_files(args.source, args.results)
+        collector.collect_problem_files(source_dir, results_dir)
         
         return 0
     else:

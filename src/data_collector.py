@@ -21,14 +21,15 @@ class DVMHDataCollector:
         """
         self.logger = logging.getLogger(f"dvmh_predictor.{__name__}")
         self.config = self._load_config(config_path)
-        
-        # Извлекаем основные параметры из конфига
-        self.dimensions = self.config['data_collection']['dimensions']
-        self.file_extensions = self.config['data_collection']['file_extensions']
-        self.compiler_flags = self.config['data_collection']['compiler_flags']
-        self.temp_patterns = self.config['data_collection']['temp_file_patterns']
-        self.preserved_files = self.config['data_collection']['preserved_files']
-        self.sapfor_path = self.config['data_collection']['sapfor_executable']
+
+        collection_cfg = self.config.get('data_collection', {})
+        # dimensions могут отсутствовать в новом конфиге, тогда определяем их динамически
+        self.dimensions = collection_cfg.get('dimensions') or []
+        self.file_extensions = collection_cfg.get('file_extensions', ['.f', '.f90'])
+        self.compiler_flags = collection_cfg.get('compiler_flags', '-O3 -g -fprofile-arcs -ftest-coverage')
+        self.temp_patterns = collection_cfg.get('temp_file_patterns', ['*.gcda', '*.gcno', '*.gcov', '*.dep', '*.proj', '*.mod'])
+        self.preserved_files = collection_cfg.get('preserved_files', ['info.json', '*_output.log', '*.gcov'])
+        self.sapfor_path = collection_cfg.get('sapfor_executable', '../SAPFOR/_bin/Release/Sapfor_F.exe')
         
         self.logger.info("DVMHDataCollector инициализирован")
     
@@ -78,8 +79,11 @@ class DVMHDataCollector:
         success_count = 0
         total_count = 0
         
-        # Обрабатываем каждую размерность
-        for dim in self.dimensions:
+        # Определяем список размерностей (или просто подпапок) для обработки
+        dimensions = self.dimensions or self._discover_dimensions(source_dir)
+
+        # Обрабатываем каждую размерность/подпапку
+        for dim in dimensions:
             dim_success, dim_total = self._process_dimension(source_dir, results_dir, dim)
             success_count += dim_success
             total_count += dim_total
@@ -455,3 +459,11 @@ class DVMHDataCollector:
             f.write("\n" + "=" * 50 + "\n")
             f.write(f"ERROR: Processing of {filename} failed at {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
             f.write(f"Error message: {error_msg}\n")
+
+    def _discover_dimensions(self, source_dir: str):
+        """Автоопределение подпапок с исходниками, если список размерностей не задан"""
+        try:
+            return [d for d in os.listdir(source_dir) if os.path.isdir(os.path.join(source_dir, d))]
+        except FileNotFoundError:
+            self.logger.error(f"Исходная директория не существует: {source_dir}")
+            return []

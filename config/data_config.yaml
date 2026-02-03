@@ -7,11 +7,8 @@ data_collection:
   # Путь к SAPFOR
   sapfor_executable: "Sapfor_F"
   
-  # Размерности программ для обработки
-  dimensions: ["1d"]
-  
   # Поддерживаемые расширения файлов
-  file_extensions: [".f", ".f90"]
+  file_extensions: [".f", ".f90", ".fdv"]
   
   # Флаги компиляции для профилирования
   compiler_flags: "-O3 -g -fprofile-arcs -ftest-coverage"

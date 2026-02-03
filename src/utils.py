@@ -41,7 +41,7 @@ def setup_logging(log_level: str = "INFO", log_dir: str = "logs") -> str:
     
     return log_filename
 
-def run_command(command: str, check: bool = False, output_file: Optional[str] = None) -> Union[subprocess.CompletedProcess, Tuple[bool, Exception]]:
+def run_command(command: str, check: bool = False, output_file: Optional[str] = None, cwd: Optional[str] = None) -> Union[subprocess.CompletedProcess, Tuple[bool, Exception]]:
     """
     Выполнение команды с логированием и опциональной записью в файл
     
@@ -57,12 +57,13 @@ def run_command(command: str, check: bool = False, output_file: Optional[str] = 
     
     try:
         result = subprocess.run(
-            command, 
-            check=check, 
-            shell=True, 
-            stdout=subprocess.PIPE, 
+            command,
+            check=check,
+            shell=True,
+            stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
-            universal_newlines=True
+            universal_newlines=True,
+            cwd=cwd
         )
         
         # Логируем результат

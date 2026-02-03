@@ -158,11 +158,20 @@ class DVMHDataCollector:
         self._initialize_log_file(output_log_file, filename, 
                                  os.path.basename(results_dim_dir))
         
-        # Копируем исходный файл
+        # Копируем исходный файл (целевая копия с расширением .f)
         source_file = os.path.join(source_dim_dir, filename)
-        dest_file = os.path.join(file_dir_path, filename)
+        base_name, _ = os.path.splitext(filename)
+        dest_file = os.path.join(file_dir_path, f"{base_name}.f")
         if not self._copy_source_file(source_file, dest_file, output_log_file):
             return False
+
+        # Копируем include-файл, используемый в исходниках (сохраняем относительное расположение)
+        include_source = os.path.join(source_dim_dir, '..', 'fdv_header.inc')
+        include_dest_dir = os.path.abspath(os.path.join(file_dir_path, '..'))
+        if not os.path.exists(include_dest_dir):
+            os.makedirs(include_dest_dir)
+        include_dest = os.path.join(include_dest_dir, 'fdv_header.inc')
+        self._copy_source_file(include_source, include_dest, output_log_file)
         
         # Выполняем основную обработку
         try:
@@ -205,40 +214,27 @@ class DVMHDataCollector:
         """Выполнение основного пайплайна обработки"""
         
         # 1. Компиляция с профилированием
-        executable_path = os.path.join(file_dir_path, file_name)
-        compile_cmd = f'gfortran {self.compiler_flags} "{dest_file}" -o "{executable_path}"'
+        source_basename = os.path.basename(dest_file)
+        executable_name = file_name
+        compile_cmd = f'gfortran {self.compiler_flags} "{source_basename}" -o "{executable_name}"'
         
-        result = run_command(compile_cmd, check=False, output_file=output_log_file)
+        result = run_command(compile_cmd, check=False, output_file=output_log_file, cwd=file_dir_path)
         if result is False:
             self.logger.error(f"Ошибка компиляции для {filename}")
             return False
         
         # 2. Запуск программы
-        run_prog_cmd = f'"{executable_path}"'
-        result = run_command(run_prog_cmd, check=False, output_file=output_log_file)
+        run_prog_cmd = f'"./{executable_name}"'
+        result = run_command(run_prog_cmd, check=False, output_file=output_log_file, cwd=file_dir_path)
         if result is False:
             self.logger.warning(f"Ошибка выполнения программы {filename}")
             
             
-        gcno_file = f'./{file_name}.gcno'
-        gcno_dest = os.path.join(file_dir_path, f'{file_name}.gcno')
-        self.copy_and_remove(gcno_file, gcno_dest, output_log_file)
-        
-        gcda_file = f'./{file_name}.gcda'
-        gcda_dest = os.path.join(file_dir_path, f'{file_name}.gcda')
-        self.copy_and_remove(gcda_file, gcda_dest, output_log_file)
-        
-        
         # 3. Генерация отчета покрытия
-        gcov_cmd = f'gcov -b "{dest_file}"'
-        run_command(gcov_cmd, check=False, output_file=output_log_file)
+        gcov_cmd = f'gcov -b "{source_basename}"'
+        run_command(gcov_cmd, check=False, output_file=output_log_file, cwd=file_dir_path)
         
-        # 4. Копирование gcov-файла
-        gcov_file = f'./{filename}.gcov'
-        gcov_dest = os.path.join(file_dir_path, f'{filename}.gcov')
-        self.copy_and_remove(gcov_file, gcov_dest, output_log_file)
-        
-        # 5. Анализ SAPFOR
+        # 4. Анализ SAPFOR
         if not self._run_sapfor_analysis(dest_file, file_dir_path, output_log_file):
             self.logger.warning(f"Ошибка анализа SAPFOR для {filename}")
         

@@ -235,7 +235,7 @@ class DVMHDataCollector:
         run_command(gcov_cmd, check=False, output_file=output_log_file, cwd=file_dir_path)
         
         # 4. Анализ SAPFOR
-        if not self._run_sapfor_analysis(dest_file, file_dir_path, output_log_file):
+        if not self._run_sapfor_analysis(source_basename, file_dir_path, output_log_file):
             self.logger.warning(f"Ошибка анализа SAPFOR для {filename}")
         
         # 6. Финализация лога
@@ -245,21 +245,18 @@ class DVMHDataCollector:
         
         return True
     
-    def _run_sapfor_analysis(self, dest_file: str, file_dir_path: str, output_log_file: str) -> bool:
+    def _run_sapfor_analysis(self, source_basename: str, file_dir_path: str, output_log_file: str) -> bool:
         """Запуск анализа SAPFOR"""
         try:
             # Парсинг файла
-            sapfor_parse_cmd = f'"{self.sapfor_path}" -parse -spf "{dest_file}"'
-            run_command(sapfor_parse_cmd, check=False, output_file=output_log_file)
+            sapfor_parse_cmd = f'"{self.sapfor_path}" -parse -spf "{source_basename}"'
+            run_command(sapfor_parse_cmd, check=False, output_file=output_log_file, cwd=file_dir_path)
             
             # Получение статистик
             sapfor_stats_cmd = f'"{self.sapfor_path}" -passN GET_STATS_FOR_PREDICTOR -keepDVM'
-            run_command(sapfor_stats_cmd, check=False, output_file=output_log_file)
+            run_command(sapfor_stats_cmd, check=False, output_file=output_log_file, cwd=file_dir_path)
             
-            # Копирование info.json
-            info_file = './info.json'
-            info_dest = os.path.join(file_dir_path, 'info.json')
-            return self.copy_and_remove(info_file, info_dest, output_log_file)
+            return True
             
         except Exception as e:
             self.logger.error(f"Ошибка в анализе SAPFOR: {str(e)}")

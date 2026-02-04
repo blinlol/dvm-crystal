@@ -1,7 +1,8 @@
 .git
-data
 problems
 logs
 test.ipynb
 **/__pycache__
 .venv
+data/**/*.log
+data/**/*.gcov

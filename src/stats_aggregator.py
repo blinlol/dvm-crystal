@@ -27,7 +27,6 @@ class DVMHStatsAggregator:
         self.cover_path = aggregation_config.get('cover_directory', "./data/raw")
         self.results_path = aggregation_config.get('results_directory', "./data/parallel_results")
         self.output_path = aggregation_config.get('output_directory', "./data/processed")
-        self.dimensions = self.config['data_collection']['dimensions']
         
         # Регулярные выражения для парсинга файлов статистики
         self.processor_pattern = r'Processor system=(.+)'
@@ -35,6 +34,37 @@ class DVMHStatsAggregator:
         self.time_pattern = r'Total time\s+([\d.]+)'
         
         self.logger.info("DVMHStatsAggregator инициализирован")
+
+    def _parse_param_dir(self, param_dir: str) -> Dict[str, object]:
+        """Парсинг параметров из имени директории param_*"""
+        params = {}
+        if not param_dir.startswith("param_"):
+            return params
+
+        tokens = [token for token in param_dir[len("param_"):].split("_") if token]
+        for token in tokens:
+            match = re.match(r"^([A-Za-z]+)([-\d\.]+)$", token)
+            if not match:
+                params[token] = True
+                continue
+            key, value_str = match.groups()
+            if value_str.isdigit() or (value_str.startswith("-") and value_str[1:].isdigit()):
+                value = int(value_str)
+            else:
+                try:
+                    value = float(value_str)
+                except ValueError:
+                    value = value_str
+            params[key] = value
+        return params
+
+    def _extract_params_from_path(self, stat_file_path: str, program_results_root: str) -> Dict[str, object]:
+        """Извлекает параметры из части пути, содержащей директорию param_*"""
+        rel_path = os.path.relpath(os.path.dirname(stat_file_path), program_results_root)
+        for part in rel_path.split(os.sep):
+            if part.startswith("param_"):
+                return self._parse_param_dir(part)
+        return {}
     
     def _load_config(self, config_path: str) -> Dict:
         """Загрузка конфигурации из YAML файла"""
@@ -80,7 +110,7 @@ class DVMHStatsAggregator:
                 processed_program = self._process_single_program(program_key, program_data)
                 if processed_program:
                     # Используем только имя программы без размерности как ключ
-                    program_name = program_key.split('/')[1]
+                    program_name = os.path.basename(program_key)
                     processed_programs[program_name] = processed_program
                 else:
                     deleted_programs.append(program_key)
@@ -103,33 +133,30 @@ class DVMHStatsAggregator:
         
         programs = {}
         
-        for dim in self.dimensions:
-            cover_dim_path = os.path.join(self.cover_path, dim)
-            
-            if not os.path.exists(cover_dim_path):
-                self.logger.warning(f"Директория размерности не найдена: {cover_dim_path}")
+        if not os.path.exists(self.cover_path):
+            self.logger.error(f"Директория покрытия не найдена: {self.cover_path}")
+            return programs
+
+        # Новая иерархия: рекурсивный поиск info.json внутри cover_directory
+        for root, _, files in os.walk(self.cover_path):
+            if 'info.json' not in files:
                 continue
-            
+
+            program_info_path = os.path.join(root, 'info.json')
+            rel_dir = os.path.relpath(root, self.cover_path)
+            if rel_dir == '.':
+                rel_dir = ''
+
             try:
-                program_dirs = os.listdir(cover_dim_path)
-            except OSError as e:
-                self.logger.error(f"Ошибка при чтении директории {cover_dim_path}: {str(e)}")
-                continue
-            
-            for program_dir in program_dirs:
-                program_info_path = os.path.join(cover_dim_path, program_dir, 'info.json')
-                
-                try:
-                    with open(program_info_path, 'r', encoding='utf-8') as f:
-                        program_data = json.load(f)
-                        programs[f"{dim}/{program_dir}"] = program_data
-                        self.logger.debug(f"Загружены данные покрытия: {dim}/{program_dir}")
-                except FileNotFoundError:
-                    self.logger.warning(f"Файл info.json не найден: {program_info_path}")
-                except json.JSONDecodeError as e:
-                    self.logger.error(f"Ошибка при парсинге JSON {program_info_path}: {str(e)}")
-                except Exception as e:
-                    self.logger.error(f"Неожиданная ошибка при загрузке {program_info_path}: {str(e)}")
+                with open(program_info_path, 'r', encoding='utf-8') as f:
+                    program_data = json.load(f)
+                    program_key = rel_dir if rel_dir else os.path.basename(root)
+                    programs[program_key] = program_data
+                    self.logger.debug(f"Загружены данные покрытия: {program_key}")
+            except json.JSONDecodeError as e:
+                self.logger.error(f"Ошибка при парсинге JSON {program_info_path}: {str(e)}")
+            except Exception as e:
+                self.logger.error(f"Неожиданная ошибка при загрузке {program_info_path}: {str(e)}")
         
         self.logger.info(f"Загружено программ с данными покрытия: {len(programs)}")
         return programs
@@ -167,51 +194,46 @@ class DVMHStatsAggregator:
         processed_program['program_info']['launches'] = []
         
         # Загружаем результаты запусков
-        results_path = os.path.join(self.results_path, program_key)
-        self.logger.debug(f"Поиск результатов запусков в: {results_path}")
-        
-        if not os.path.exists(results_path):
-            self.logger.warning(f"Директория с результатами не найдена: {results_path}")
+        program_name = os.path.basename(program_key)
+        results_root = os.path.join(self.results_path, program_name)
+
+        if not os.path.exists(results_root):
+            self.logger.warning(
+                f"Директория с результатами не найдена для программы {program_name}: {results_root}"
+            )
             return None
-        
-        try:
-            runs_dirs = os.listdir(results_path)
-        except OSError as e:
-            self.logger.error(f"Ошибка при чтении директории результатов {results_path}: {str(e)}")
-            return None
-        
-        # Обрабатываем каждый запуск
-        sequential_time_found = False
-        
-        for run_dir in runs_dirs:
-            run_stat_file = os.path.join(results_path, run_dir, 'stat.txt')
-            
+
+        self.logger.debug(f"Поиск результатов запусков в: {results_root}")
+
+        # Обрабатываем каждый запуск (рекурсивно ищем stat.txt)
+
+        for root, _, files in os.walk(results_root):
+            if 'stat.txt' not in files:
+                continue
+
+            run_stat_file = os.path.join(root, 'stat.txt')
+
             try:
                 run_info = self._parse_run_statistics(run_stat_file)
                 if run_info:
-                    if run_info['threads'] == 1:
-                        # Последовательное выполнение
-                        processed_program['program_info']['sequential_execution_time_sec'] = run_info['total_time']
-                        sequential_time_found = True
-                        self.logger.debug(f"Найдено последовательное время: {run_info['total_time']}с")
-                    else:
-                        # Параллельное выполнение
-                        launch_data = {
-                            'grid': run_info['grid'],
-                            'threads': run_info['threads'],
-                            'total_time': run_info['total_time']
-                        }
-                        processed_program['program_info']['launches'].append(launch_data)
-                        self.logger.debug(f"Добавлен запуск: grid={run_info['grid']}, threads={run_info['threads']}")
-                        
+                    params = self._extract_params_from_path(run_stat_file, results_root)
+                    launch_data = {
+                        'grid': run_info['grid'],
+                        'threads': run_info['threads'],
+                        'total_time': run_info['total_time']
+                    }
+                    if params:
+                        launch_data['params'] = params
+                    processed_program['program_info']['launches'].append(launch_data)
+                    self.logger.debug(
+                        f"Добавлен запуск: grid={run_info['grid']}, threads={run_info['threads']}"
+                    )
+
             except Exception as e:
                 self.logger.warning(f"Ошибка при обработке запуска {run_stat_file}: {str(e)}")
                 continue
         
         # Проверяем, что у нас есть необходимые данные
-        if not sequential_time_found:
-            self.logger.warning(f"Не найдено время последовательного выполнения для {program_key}")
-        
         if not processed_program['program_info']['launches']:
             self.logger.warning(f"Не найдено параллельных запусков для {program_key}")
             return None
@@ -337,8 +359,8 @@ class DVMHStatsAggregator:
         programs_with_sequential_time = 0
         
         for program_name, program_data in data.items():
-            # Подсчитываем программы с последовательным временем
-            if 'sequential_execution_time_sec' in program_data['program_info']:
+            # Подсчитываем программы с запуском на 1 потоке
+            if any(launch.get('threads') == 1 for launch in program_data['program_info']['launches']):
                 programs_with_sequential_time += 1
         
         report = {

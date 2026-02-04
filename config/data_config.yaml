@@ -34,4 +34,6 @@ data_collection:
     format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 
 data_aggregation:
-  results_directory: ../dvm-crystal-data/results
+  cover_directory: './data/raw'
+  results_directory: '../dvm-crystal-data/results'
+  output_directory: './data/processed'

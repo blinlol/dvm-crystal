@@ -164,14 +164,6 @@ class DVMHDataCollector:
         dest_file = os.path.join(file_dir_path, f"{base_name}.f")
         if not self._copy_source_file(source_file, dest_file, output_log_file):
             return False
-
-        # Копируем include-файл, используемый в исходниках (сохраняем относительное расположение)
-        include_source = os.path.join(source_dim_dir, '..', 'fdv_header.inc')
-        include_dest_dir = os.path.abspath(os.path.join(file_dir_path, '..'))
-        if not os.path.exists(include_dest_dir):
-            os.makedirs(include_dest_dir)
-        include_dest = os.path.join(include_dest_dir, 'fdv_header.inc')
-        self._copy_source_file(include_source, include_dest, output_log_file)
         
         # Выполняем основную обработку
         try:

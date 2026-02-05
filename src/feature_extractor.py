@@ -328,7 +328,22 @@ class DVMHFeatureSpaceCreator:
             raise ValueError(f"No launch data found for program {program_name}")
         
         rows = []
-        sequential_time = static_features['sequential_execution_time']
+
+        # Определяем последовательное время как запуск на 1 потоке и 1 процессоре
+        sequential_candidates = []
+        for launch in launches:
+            grid = launch.get('grid', [])
+            threads = launch.get('threads', 0)
+            if threads == 1 and grid and all(g == 1 for g in grid):
+                sequential_candidates.append(launch.get('total_time', 0))
+
+        if sequential_candidates:
+            sequential_time = min(sequential_candidates)
+        else:
+            sequential_time = static_features['sequential_execution_time']
+            self.logger.warning(
+                "Не найден запуск с grid=1 и threads=1, используется sequential_execution_time"
+            )
         
         # Обрабатываем каждый запуск
         for launch in launches:

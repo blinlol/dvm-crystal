@@ -112,9 +112,75 @@
             1
           ],
           "threads": 1,
-          "total_time": 0.0299,
+          "total_time": 0.0306,
           "params": {
-            "N": 100,
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0298,
+          "params": {
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0963,
+          "params": {
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0295,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0302,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.089,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0457,
+          "params": {
+            "N": 500,
             "NL": 10
           }
         },
@@ -123,9 +189,9 @@
             1
           ],
           "threads": 2,
-          "total_time": 0.0376,
+          "total_time": 0.0563,
           "params": {
-            "N": 100,
+            "N": 500,
             "NL": 10
           }
         },
@@ -134,9 +200,9 @@
             2
           ],
           "threads": 2,
-          "total_time": 0.8516,
+          "total_time": 0.0961,
           "params": {
-            "N": 100,
+            "N": 500,
             "NL": 10
           }
         },
@@ -178,9 +244,9 @@
             1
           ],
           "threads": 1,
-          "total_time": 0.0505,
+          "total_time": 0.032,
           "params": {
-            "N": 100,
+            "N": 1000,
             "NL": 100
           }
         },
@@ -189,9 +255,9 @@
             1
           ],
           "threads": 2,
-          "total_time": 0.0558,
+          "total_time": 0.032,
           "params": {
-            "N": 100,
+            "N": 1000,
             "NL": 100
           }
         },
@@ -200,9 +266,9 @@
             2
           ],
           "threads": 2,
-          "total_time": 0.1117,
+          "total_time": 0.086,
           "params": {
-            "N": 100,
+            "N": 1000,
             "NL": 100
           }
         },
@@ -211,9 +277,9 @@
             1
           ],
           "threads": 1,
-          "total_time": 0.0457,
+          "total_time": 0.0299,
           "params": {
-            "N": 500,
+            "N": 100,
             "NL": 10
           }
         },
@@ -222,9 +288,9 @@
             1
           ],
           "threads": 2,
-          "total_time": 0.0563,
+          "total_time": 0.0376,
           "params": {
-            "N": 500,
+            "N": 100,
             "NL": 10
           }
         },
@@ -233,43 +299,10 @@
             2
           ],
           "threads": 2,
-          "total_time": 0.0961,
+          "total_time": 0.8516,
           "params": {
-            "N": 500,
+            "N": 100,
             "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0295,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0302,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.089,
-          "params": {
-            "N": 500,
-            "NL": 50
           }
         },
         {
@@ -310,6 +343,39 @@
             1
           ],
           "threads": 1,
+          "total_time": 0.0505,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0558,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.1117,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
           "total_time": 0.0298,
           "params": {
             "N": 1000,
@@ -336,2112 +402,6 @@
           "params": {
             "N": 1000,
             "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0306,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0298,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0963,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.032,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.032,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.086,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        }
-      ]
-    }
-  },
-  "acr1102": {
-    "cluster_info": {
-      "cores_per_node": 0,
-      "memory_per_node_gb": 0,
-      "network_bandwidth_gbps": 0,
-      "network_latency_ms": 0,
-      "num_nodes": 0,
-      "threads_per_node": 0
-    },
-    "program_info": {
-      "arrays_info": [
-        {
-          "dimensions": [
-            1
-          ],
-          "element_size_bytes": 4,
-          "name": "f0_17_a"
-        },
-        {
-          "dimensions": [
-            1
-          ],
-          "element_size_bytes": 4,
-          "name": "f0_17_c"
-        }
-      ],
-      "average_parallel_line_executions": 24.5,
-      "directives": {
-        "across": [
-          {
-            "array_id": 0,
-            "communication_pattern": "NEAREST_NEIGHBOR",
-            "line": 45,
-            "width": [
-              [
-                0,
-                0,
-                1
-              ]
-            ]
-          }
-        ],
-        "distribute": [
-          {
-            "array_id": 0,
-            "distribution_spec": [
-              "BLOCK"
-            ],
-            "line": 21
-          }
-        ],
-        "parallel": [
-          {
-            "acrosses": [],
-            "computational_intensity": 1.0,
-            "iterations_count": [
-              51
-            ],
-            "line": 40,
-            "loops_count": 1,
-            "reductions": [],
-            "remote_accesses": [],
-            "shadow_renews": []
-          },
-          {
-            "acrosses": [],
-            "computational_intensity": 0.6666666666666666,
-            "iterations_count": [
-              48
-            ],
-            "line": 45,
-            "loops_count": 1,
-            "reductions": [],
-            "remote_accesses": [],
-            "shadow_renews": [
-              0
-            ]
-          },
-          {
-            "acrosses": [],
-            "computational_intensity": 0.5,
-            "iterations_count": [
-              1
-            ],
-            "line": 50,
-            "loops_count": 1,
-            "reductions": [
-              0
-            ],
-            "remote_accesses": [],
-            "shadow_renews": []
-          }
-        ],
-        "reduction": [
-          {
-            "elements_count": 1,
-            "line": 50,
-            "operation": "min",
-            "reduction_type": "SCALAR",
-            "size_bytes": 4
-          }
-        ],
-        "remote_access": null,
-        "shadow_renew": null
-      },
-      "parallel_execution_fraction": 0.4206008583690987,
-      "sequential_execution_time_sec": 0.0,
-      "launches": [
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0318,
-          "params": {
-            "N": 100,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0391,
-          "params": {
-            "N": 100,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0858,
-          "params": {
-            "N": 100,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0445,
-          "params": {
-            "N": 100,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0382,
-          "params": {
-            "N": 100,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.5738,
-          "params": {
-            "N": 100,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0351,
-          "params": {
-            "N": 100,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.1362,
-          "params": {
-            "N": 100,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.323,
-          "params": {
-            "N": 100,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.051,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.047,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.4347,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0354,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0401,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0968,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0311,
-          "params": {
-            "N": 500,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0395,
-          "params": {
-            "N": 500,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0863,
-          "params": {
-            "N": 500,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0306,
-          "params": {
-            "N": 1000,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0368,
-          "params": {
-            "N": 1000,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0908,
-          "params": {
-            "N": 1000,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0311,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0371,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0865,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0301,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0379,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0879,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        }
-      ]
-    }
-  },
-  "acr1103": {
-    "cluster_info": {
-      "cores_per_node": 0,
-      "memory_per_node_gb": 0,
-      "network_bandwidth_gbps": 0,
-      "network_latency_ms": 0,
-      "num_nodes": 0,
-      "threads_per_node": 0
-    },
-    "program_info": {
-      "arrays_info": [
-        {
-          "dimensions": [
-            1
-          ],
-          "element_size_bytes": 4,
-          "name": "f0_17_a"
-        },
-        {
-          "dimensions": [
-            1
-          ],
-          "element_size_bytes": 4,
-          "name": "f0_17_c"
-        }
-      ],
-      "average_parallel_line_executions": 24.5,
-      "directives": {
-        "across": [
-          {
-            "array_id": 0,
-            "communication_pattern": "NEAREST_NEIGHBOR",
-            "line": 46,
-            "width": [
-              [
-                0,
-                1,
-                0
-              ]
-            ]
-          }
-        ],
-        "distribute": [
-          {
-            "array_id": 0,
-            "distribution_spec": [
-              "BLOCK"
-            ],
-            "line": 23
-          }
-        ],
-        "parallel": [
-          {
-            "acrosses": [],
-            "computational_intensity": 1.0,
-            "iterations_count": [
-              51
-            ],
-            "line": 40,
-            "loops_count": 1,
-            "reductions": [],
-            "remote_accesses": [],
-            "shadow_renews": []
-          },
-          {
-            "acrosses": [],
-            "computational_intensity": 0.6666666666666666,
-            "iterations_count": [
-              48
-            ],
-            "line": 46,
-            "loops_count": 1,
-            "reductions": [],
-            "remote_accesses": [],
-            "shadow_renews": [
-              0
-            ]
-          },
-          {
-            "acrosses": [],
-            "computational_intensity": 0.5,
-            "iterations_count": [
-              1
-            ],
-            "line": 51,
-            "loops_count": 1,
-            "reductions": [
-              0
-            ],
-            "remote_accesses": [],
-            "shadow_renews": []
-          }
-        ],
-        "reduction": [
-          {
-            "elements_count": 1,
-            "line": 51,
-            "operation": "min",
-            "reduction_type": "SCALAR",
-            "size_bytes": 4
-          }
-        ],
-        "remote_access": null,
-        "shadow_renew": null
-      },
-      "parallel_execution_fraction": 0.4206008583690987,
-      "sequential_execution_time_sec": 0.0,
-      "launches": [
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0298,
-          "params": {
-            "N": 100,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0373,
-          "params": {
-            "N": 100,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0873,
-          "params": {
-            "N": 100,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0351,
-          "params": {
-            "N": 100,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0425,
-          "params": {
-            "N": 100,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0882,
-          "params": {
-            "N": 100,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0297,
-          "params": {
-            "N": 100,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0375,
-          "params": {
-            "N": 100,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0897,
-          "params": {
-            "N": 100,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0309,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0379,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.089,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0302,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0365,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0862,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0301,
-          "params": {
-            "N": 500,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.037,
-          "params": {
-            "N": 500,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.091,
-          "params": {
-            "N": 500,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0294,
-          "params": {
-            "N": 1000,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0371,
-          "params": {
-            "N": 1000,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0874,
-          "params": {
-            "N": 1000,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0297,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0433,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0956,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.03,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0306,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0864,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        }
-      ]
-    }
-  },
-  "acr1104": {
-    "cluster_info": {
-      "cores_per_node": 0,
-      "memory_per_node_gb": 0,
-      "network_bandwidth_gbps": 0,
-      "network_latency_ms": 0,
-      "num_nodes": 0,
-      "threads_per_node": 0
-    },
-    "program_info": {
-      "arrays_info": [
-        {
-          "dimensions": [
-            1
-          ],
-          "element_size_bytes": 4,
-          "name": "f0_14_a"
-        },
-        {
-          "dimensions": [
-            1
-          ],
-          "element_size_bytes": 4,
-          "name": "f0_14_c"
-        }
-      ],
-      "average_parallel_line_executions": 22.25,
-      "directives": {
-        "across": [
-          {
-            "array_id": 0,
-            "communication_pattern": "NEAREST_NEIGHBOR",
-            "line": 40,
-            "width": [
-              [
-                0,
-                2,
-                2
-              ]
-            ]
-          }
-        ],
-        "distribute": [
-          {
-            "array_id": 0,
-            "distribution_spec": [
-              "BLOCK"
-            ],
-            "line": 18
-          }
-        ],
-        "parallel": [
-          {
-            "acrosses": [],
-            "computational_intensity": 1.0,
-            "iterations_count": [
-              51
-            ],
-            "line": 35,
-            "loops_count": 1,
-            "reductions": [],
-            "remote_accesses": [],
-            "shadow_renews": []
-          },
-          {
-            "acrosses": [],
-            "computational_intensity": 1.4,
-            "iterations_count": [
-              39
-            ],
-            "line": 40,
-            "loops_count": 1,
-            "reductions": [],
-            "remote_accesses": [],
-            "shadow_renews": [
-              0
-            ]
-          },
-          {
-            "acrosses": [],
-            "computational_intensity": 0.5,
-            "iterations_count": [
-              1
-            ],
-            "line": 45,
-            "loops_count": 1,
-            "reductions": [
-              0
-            ],
-            "remote_accesses": [],
-            "shadow_renews": []
-          }
-        ],
-        "reduction": [
-          {
-            "elements_count": 1,
-            "line": 45,
-            "operation": "min",
-            "reduction_type": "SCALAR",
-            "size_bytes": 4
-          }
-        ],
-        "remote_access": null,
-        "shadow_renew": null
-      },
-      "parallel_execution_fraction": 0.42891566265060244,
-      "sequential_execution_time_sec": 0.0,
-      "launches": [
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0404,
-          "params": {
-            "N": 100,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0368,
-          "params": {
-            "N": 100,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0884,
-          "params": {
-            "N": 100,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0338,
-          "params": {
-            "N": 100,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0384,
-          "params": {
-            "N": 100,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0882,
-          "params": {
-            "N": 100,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0314,
-          "params": {
-            "N": 100,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0375,
-          "params": {
-            "N": 100,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0884,
-          "params": {
-            "N": 100,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0304,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0515,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0869,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0318,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.1039,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0884,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0296,
-          "params": {
-            "N": 500,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0426,
-          "params": {
-            "N": 500,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0883,
-          "params": {
-            "N": 500,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0309,
-          "params": {
-            "N": 1000,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0364,
-          "params": {
-            "N": 1000,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0894,
-          "params": {
-            "N": 1000,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.033,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0394,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0924,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.034,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0405,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0931,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        }
-      ]
-    }
-  },
-  "acr1105": {
-    "cluster_info": {
-      "cores_per_node": 0,
-      "memory_per_node_gb": 0,
-      "network_bandwidth_gbps": 0,
-      "network_latency_ms": 0,
-      "num_nodes": 0,
-      "threads_per_node": 0
-    },
-    "program_info": {
-      "arrays_info": [
-        {
-          "dimensions": [
-            1
-          ],
-          "element_size_bytes": 4,
-          "name": "f0_14_a"
-        },
-        {
-          "dimensions": [
-            1
-          ],
-          "element_size_bytes": 4,
-          "name": "f0_14_c"
-        }
-      ],
-      "average_parallel_line_executions": 23.0,
-      "directives": {
-        "across": [
-          {
-            "array_id": 0,
-            "communication_pattern": "NEAREST_NEIGHBOR",
-            "line": 41,
-            "width": [
-              [
-                0,
-                0,
-                2
-              ]
-            ]
-          }
-        ],
-        "distribute": [
-          {
-            "array_id": 0,
-            "distribution_spec": [
-              "BLOCK"
-            ],
-            "line": 19
-          }
-        ],
-        "parallel": [
-          {
-            "acrosses": [],
-            "computational_intensity": 1.0,
-            "iterations_count": [
-              51
-            ],
-            "line": 36,
-            "loops_count": 1,
-            "reductions": [],
-            "remote_accesses": [],
-            "shadow_renews": []
-          },
-          {
-            "acrosses": [],
-            "computational_intensity": 1.0,
-            "iterations_count": [
-              42
-            ],
-            "line": 41,
-            "loops_count": 1,
-            "reductions": [],
-            "remote_accesses": [],
-            "shadow_renews": [
-              0
-            ]
-          },
-          {
-            "acrosses": [],
-            "computational_intensity": 0.5,
-            "iterations_count": [
-              1
-            ],
-            "line": 46,
-            "loops_count": 1,
-            "reductions": [
-              0
-            ],
-            "remote_accesses": [],
-            "shadow_renews": []
-          }
-        ],
-        "reduction": [
-          {
-            "elements_count": 1,
-            "line": 46,
-            "operation": "min",
-            "reduction_type": "SCALAR",
-            "size_bytes": 4
-          }
-        ],
-        "remote_access": null,
-        "shadow_renew": null
-      },
-      "parallel_execution_fraction": 0.42790697674418604,
-      "sequential_execution_time_sec": 0.0,
-      "launches": [
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0304,
-          "params": {
-            "N": 100,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0375,
-          "params": {
-            "N": 100,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0897,
-          "params": {
-            "N": 100,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0315,
-          "params": {
-            "N": 100,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0383,
-          "params": {
-            "N": 100,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0867,
-          "params": {
-            "N": 100,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0308,
-          "params": {
-            "N": 100,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0371,
-          "params": {
-            "N": 100,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0887,
-          "params": {
-            "N": 100,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0302,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0445,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.1021,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0334,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0378,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.1127,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0337,
-          "params": {
-            "N": 500,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0425,
-          "params": {
-            "N": 500,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.112,
-          "params": {
-            "N": 500,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0371,
-          "params": {
-            "N": 1000,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0398,
-          "params": {
-            "N": 1000,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0951,
-          "params": {
-            "N": 1000,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0319,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0379,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0855,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0323,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0386,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0904,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        }
-      ]
-    }
-  },
-  "acr1106": {
-    "cluster_info": {
-      "cores_per_node": 0,
-      "memory_per_node_gb": 0,
-      "network_bandwidth_gbps": 0,
-      "network_latency_ms": 0,
-      "num_nodes": 0,
-      "threads_per_node": 0
-    },
-    "program_info": {
-      "arrays_info": [
-        {
-          "dimensions": [
-            1
-          ],
-          "element_size_bytes": 4,
-          "name": "f0_19_a"
-        },
-        {
-          "dimensions": [
-            1
-          ],
-          "element_size_bytes": 4,
-          "name": "f0_19_c"
-        }
-      ],
-      "average_parallel_line_executions": 23.75,
-      "directives": {
-        "across": [
-          {
-            "array_id": 0,
-            "communication_pattern": "NEAREST_NEIGHBOR",
-            "line": 47,
-            "width": [
-              [
-                0,
-                2,
-                0
-              ]
-            ]
-          }
-        ],
-        "distribute": [
-          {
-            "array_id": 0,
-            "distribution_spec": [
-              "BLOCK"
-            ],
-            "line": 23
-          }
-        ],
-        "parallel": [
-          {
-            "acrosses": [],
-            "computational_intensity": 1.0,
-            "iterations_count": [
-              51
-            ],
-            "line": 41,
-            "loops_count": 1,
-            "reductions": [],
-            "remote_accesses": [],
-            "shadow_renews": []
-          },
-          {
-            "acrosses": [],
-            "computational_intensity": 1.0,
-            "iterations_count": [
-              45
-            ],
-            "line": 47,
-            "loops_count": 1,
-            "reductions": [],
-            "remote_accesses": [],
-            "shadow_renews": [
-              0
-            ]
-          },
-          {
-            "acrosses": [],
-            "computational_intensity": 0.5,
-            "iterations_count": [
-              1
-            ],
-            "line": 52,
-            "loops_count": 1,
-            "reductions": [
-              0
-            ],
-            "remote_accesses": [],
-            "shadow_renews": []
-          }
-        ],
-        "reduction": [
-          {
-            "elements_count": 1,
-            "line": 52,
-            "operation": "min",
-            "reduction_type": "SCALAR",
-            "size_bytes": 4
-          }
-        ],
-        "remote_access": null,
-        "shadow_renew": null
-      },
-      "parallel_execution_fraction": 0.42316258351893093,
-      "sequential_execution_time_sec": 0.0,
-      "launches": [
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0326,
-          "params": {
-            "N": 100,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.038,
-          "params": {
-            "N": 100,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0868,
-          "params": {
-            "N": 100,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0333,
-          "params": {
-            "N": 100,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0374,
-          "params": {
-            "N": 100,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0936,
-          "params": {
-            "N": 100,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0301,
-          "params": {
-            "N": 100,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0372,
-          "params": {
-            "N": 100,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0937,
-          "params": {
-            "N": 100,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0314,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0376,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0955,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0318,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0367,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0914,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0304,
-          "params": {
-            "N": 500,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0375,
-          "params": {
-            "N": 500,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0883,
-          "params": {
-            "N": 500,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0314,
-          "params": {
-            "N": 1000,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0372,
-          "params": {
-            "N": 1000,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0868,
-          "params": {
-            "N": 1000,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0297,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0368,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0869,
-          "params": {
-            "N": 1000,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0313,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.037,
-          "params": {
-            "N": 1000,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.0895,
-          "params": {
-            "N": 1000,
-            "NL": 100
           }
         }
       ]
@@ -2560,9 +520,75 @@
             1
           ],
           "threads": 1,
-          "total_time": 0.0307,
+          "total_time": 0.0339,
           "params": {
-            "N": 100,
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.036,
+          "params": {
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.088,
+          "params": {
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0301,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0409,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.09,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0302,
+          "params": {
+            "N": 500,
             "NL": 10
           }
         },
@@ -2571,9 +597,9 @@
             1
           ],
           "threads": 2,
-          "total_time": 0.0387,
+          "total_time": 0.0422,
           "params": {
-            "N": 100,
+            "N": 500,
             "NL": 10
           }
         },
@@ -2582,9 +608,9 @@
             2
           ],
           "threads": 2,
-          "total_time": 0.0899,
+          "total_time": 0.1778,
           "params": {
-            "N": 100,
+            "N": 500,
             "NL": 10
           }
         },
@@ -2626,9 +652,9 @@
             1
           ],
           "threads": 1,
-          "total_time": 0.031,
+          "total_time": 0.0298,
           "params": {
-            "N": 100,
+            "N": 1000,
             "NL": 100
           }
         },
@@ -2636,11 +662,22 @@
           "grid": [
             1
           ],
-          "threads": 2,
-          "total_time": 0.0394,
+          "threads": 1,
+          "total_time": 0.0307,
           "params": {
             "N": 100,
-            "NL": 100
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0387,
+          "params": {
+            "N": 100,
+            "NL": 10
           }
         },
         {
@@ -2651,73 +688,7 @@
           "total_time": 0.0899,
           "params": {
             "N": 100,
-            "NL": 100
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0302,
-          "params": {
-            "N": 500,
             "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0422,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.1778,
-          "params": {
-            "N": 500,
-            "NL": 10
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 1,
-          "total_time": 0.0301,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            1
-          ],
-          "threads": 2,
-          "total_time": 0.0409,
-          "params": {
-            "N": 500,
-            "NL": 50
-          }
-        },
-        {
-          "grid": [
-            2
-          ],
-          "threads": 2,
-          "total_time": 0.09,
-          "params": {
-            "N": 500,
-            "NL": 50
           }
         },
         {
@@ -2758,6 +729,39 @@
             1
           ],
           "threads": 1,
+          "total_time": 0.031,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0394,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0899,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
           "total_time": 0.0345,
           "params": {
             "N": 1000,
@@ -2785,13 +789,124 @@
             "N": 1000,
             "NL": 10
           }
+        }
+      ]
+    }
+  },
+  "acr1105": {
+    "cluster_info": {
+      "cores_per_node": 0,
+      "memory_per_node_gb": 0,
+      "network_bandwidth_gbps": 0,
+      "network_latency_ms": 0,
+      "num_nodes": 0,
+      "threads_per_node": 0
+    },
+    "program_info": {
+      "arrays_info": [
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_14_a"
         },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_14_c"
+        }
+      ],
+      "average_parallel_line_executions": 23.0,
+      "directives": {
+        "across": [
+          {
+            "array_id": 0,
+            "communication_pattern": "NEAREST_NEIGHBOR",
+            "line": 41,
+            "width": [
+              [
+                0,
+                0,
+                2
+              ]
+            ]
+          }
+        ],
+        "distribute": [
+          {
+            "array_id": 0,
+            "distribution_spec": [
+              "BLOCK"
+            ],
+            "line": 19
+          }
+        ],
+        "parallel": [
+          {
+            "acrosses": [],
+            "computational_intensity": 1.0,
+            "iterations_count": [
+              51
+            ],
+            "line": 36,
+            "loops_count": 1,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 1.0,
+            "iterations_count": [
+              42
+            ],
+            "line": 41,
+            "loops_count": 1,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": [
+              0
+            ]
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 0.5,
+            "iterations_count": [
+              1
+            ],
+            "line": 46,
+            "loops_count": 1,
+            "reductions": [
+              0
+            ],
+            "remote_accesses": [],
+            "shadow_renews": []
+          }
+        ],
+        "reduction": [
+          {
+            "elements_count": 1,
+            "line": 46,
+            "operation": "min",
+            "reduction_type": "SCALAR",
+            "size_bytes": 4
+          }
+        ],
+        "remote_access": null,
+        "shadow_renew": null
+      },
+      "parallel_execution_fraction": 0.42790697674418604,
+      "sequential_execution_time_sec": 0.0,
+      "launches": [
         {
           "grid": [
             1
           ],
           "threads": 1,
-          "total_time": 0.0339,
+          "total_time": 0.0319,
           "params": {
             "N": 1000,
             "NL": 50
@@ -2802,7 +917,7 @@
             1
           ],
           "threads": 2,
-          "total_time": 0.036,
+          "total_time": 0.0379,
           "params": {
             "N": 1000,
             "NL": 50
@@ -2813,7 +928,7 @@
             2
           ],
           "threads": 2,
-          "total_time": 0.088,
+          "total_time": 0.0855,
           "params": {
             "N": 1000,
             "NL": 50
@@ -2824,10 +939,1895 @@
             1
           ],
           "threads": 1,
-          "total_time": 0.0298,
+          "total_time": 0.0334,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0378,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.1127,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0302,
+          "params": {
+            "N": 500,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0445,
+          "params": {
+            "N": 500,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.1021,
+          "params": {
+            "N": 500,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0315,
+          "params": {
+            "N": 100,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0383,
+          "params": {
+            "N": 100,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0867,
+          "params": {
+            "N": 100,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0323,
           "params": {
             "N": 1000,
             "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0386,
+          "params": {
+            "N": 1000,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0904,
+          "params": {
+            "N": 1000,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0304,
+          "params": {
+            "N": 100,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0375,
+          "params": {
+            "N": 100,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0897,
+          "params": {
+            "N": 100,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0337,
+          "params": {
+            "N": 500,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0425,
+          "params": {
+            "N": 500,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.112,
+          "params": {
+            "N": 500,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0308,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0371,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0887,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0371,
+          "params": {
+            "N": 1000,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0398,
+          "params": {
+            "N": 1000,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0951,
+          "params": {
+            "N": 1000,
+            "NL": 10
+          }
+        }
+      ]
+    }
+  },
+  "acr1104": {
+    "cluster_info": {
+      "cores_per_node": 0,
+      "memory_per_node_gb": 0,
+      "network_bandwidth_gbps": 0,
+      "network_latency_ms": 0,
+      "num_nodes": 0,
+      "threads_per_node": 0
+    },
+    "program_info": {
+      "arrays_info": [
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_14_a"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_14_c"
+        }
+      ],
+      "average_parallel_line_executions": 22.25,
+      "directives": {
+        "across": [
+          {
+            "array_id": 0,
+            "communication_pattern": "NEAREST_NEIGHBOR",
+            "line": 40,
+            "width": [
+              [
+                0,
+                2,
+                2
+              ]
+            ]
+          }
+        ],
+        "distribute": [
+          {
+            "array_id": 0,
+            "distribution_spec": [
+              "BLOCK"
+            ],
+            "line": 18
+          }
+        ],
+        "parallel": [
+          {
+            "acrosses": [],
+            "computational_intensity": 1.0,
+            "iterations_count": [
+              51
+            ],
+            "line": 35,
+            "loops_count": 1,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 1.4,
+            "iterations_count": [
+              39
+            ],
+            "line": 40,
+            "loops_count": 1,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": [
+              0
+            ]
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 0.5,
+            "iterations_count": [
+              1
+            ],
+            "line": 45,
+            "loops_count": 1,
+            "reductions": [
+              0
+            ],
+            "remote_accesses": [],
+            "shadow_renews": []
+          }
+        ],
+        "reduction": [
+          {
+            "elements_count": 1,
+            "line": 45,
+            "operation": "min",
+            "reduction_type": "SCALAR",
+            "size_bytes": 4
+          }
+        ],
+        "remote_access": null,
+        "shadow_renew": null
+      },
+      "parallel_execution_fraction": 0.42891566265060244,
+      "sequential_execution_time_sec": 0.0,
+      "launches": [
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.033,
+          "params": {
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0394,
+          "params": {
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0924,
+          "params": {
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0318,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.1039,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0884,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0304,
+          "params": {
+            "N": 500,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0515,
+          "params": {
+            "N": 500,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0869,
+          "params": {
+            "N": 500,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0338,
+          "params": {
+            "N": 100,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0384,
+          "params": {
+            "N": 100,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0882,
+          "params": {
+            "N": 100,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.034,
+          "params": {
+            "N": 1000,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0405,
+          "params": {
+            "N": 1000,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0931,
+          "params": {
+            "N": 1000,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0404,
+          "params": {
+            "N": 100,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0368,
+          "params": {
+            "N": 100,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0884,
+          "params": {
+            "N": 100,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0296,
+          "params": {
+            "N": 500,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0426,
+          "params": {
+            "N": 500,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0883,
+          "params": {
+            "N": 500,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0314,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0375,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0884,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0309,
+          "params": {
+            "N": 1000,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0364,
+          "params": {
+            "N": 1000,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0894,
+          "params": {
+            "N": 1000,
+            "NL": 10
+          }
+        }
+      ]
+    }
+  },
+  "acr1103": {
+    "cluster_info": {
+      "cores_per_node": 0,
+      "memory_per_node_gb": 0,
+      "network_bandwidth_gbps": 0,
+      "network_latency_ms": 0,
+      "num_nodes": 0,
+      "threads_per_node": 0
+    },
+    "program_info": {
+      "arrays_info": [
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_17_a"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_17_c"
+        }
+      ],
+      "average_parallel_line_executions": 24.5,
+      "directives": {
+        "across": [
+          {
+            "array_id": 0,
+            "communication_pattern": "NEAREST_NEIGHBOR",
+            "line": 46,
+            "width": [
+              [
+                0,
+                1,
+                0
+              ]
+            ]
+          }
+        ],
+        "distribute": [
+          {
+            "array_id": 0,
+            "distribution_spec": [
+              "BLOCK"
+            ],
+            "line": 23
+          }
+        ],
+        "parallel": [
+          {
+            "acrosses": [],
+            "computational_intensity": 1.0,
+            "iterations_count": [
+              51
+            ],
+            "line": 40,
+            "loops_count": 1,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 0.6666666666666666,
+            "iterations_count": [
+              48
+            ],
+            "line": 46,
+            "loops_count": 1,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": [
+              0
+            ]
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 0.5,
+            "iterations_count": [
+              1
+            ],
+            "line": 51,
+            "loops_count": 1,
+            "reductions": [
+              0
+            ],
+            "remote_accesses": [],
+            "shadow_renews": []
+          }
+        ],
+        "reduction": [
+          {
+            "elements_count": 1,
+            "line": 51,
+            "operation": "min",
+            "reduction_type": "SCALAR",
+            "size_bytes": 4
+          }
+        ],
+        "remote_access": null,
+        "shadow_renew": null
+      },
+      "parallel_execution_fraction": 0.4206008583690987,
+      "sequential_execution_time_sec": 0.0,
+      "launches": [
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0297,
+          "params": {
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0433,
+          "params": {
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0956,
+          "params": {
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0302,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0365,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0862,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0309,
+          "params": {
+            "N": 500,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0379,
+          "params": {
+            "N": 500,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.089,
+          "params": {
+            "N": 500,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0351,
+          "params": {
+            "N": 100,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0425,
+          "params": {
+            "N": 100,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0882,
+          "params": {
+            "N": 100,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.03,
+          "params": {
+            "N": 1000,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0306,
+          "params": {
+            "N": 1000,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0864,
+          "params": {
+            "N": 1000,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0298,
+          "params": {
+            "N": 100,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0373,
+          "params": {
+            "N": 100,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0873,
+          "params": {
+            "N": 100,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0301,
+          "params": {
+            "N": 500,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.037,
+          "params": {
+            "N": 500,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.091,
+          "params": {
+            "N": 500,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0297,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0375,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0897,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0294,
+          "params": {
+            "N": 1000,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0371,
+          "params": {
+            "N": 1000,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0874,
+          "params": {
+            "N": 1000,
+            "NL": 10
+          }
+        }
+      ]
+    }
+  },
+  "acr1106": {
+    "cluster_info": {
+      "cores_per_node": 0,
+      "memory_per_node_gb": 0,
+      "network_bandwidth_gbps": 0,
+      "network_latency_ms": 0,
+      "num_nodes": 0,
+      "threads_per_node": 0
+    },
+    "program_info": {
+      "arrays_info": [
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_19_a"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_19_c"
+        }
+      ],
+      "average_parallel_line_executions": 23.75,
+      "directives": {
+        "across": [
+          {
+            "array_id": 0,
+            "communication_pattern": "NEAREST_NEIGHBOR",
+            "line": 47,
+            "width": [
+              [
+                0,
+                2,
+                0
+              ]
+            ]
+          }
+        ],
+        "distribute": [
+          {
+            "array_id": 0,
+            "distribution_spec": [
+              "BLOCK"
+            ],
+            "line": 23
+          }
+        ],
+        "parallel": [
+          {
+            "acrosses": [],
+            "computational_intensity": 1.0,
+            "iterations_count": [
+              51
+            ],
+            "line": 41,
+            "loops_count": 1,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 1.0,
+            "iterations_count": [
+              45
+            ],
+            "line": 47,
+            "loops_count": 1,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": [
+              0
+            ]
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 0.5,
+            "iterations_count": [
+              1
+            ],
+            "line": 52,
+            "loops_count": 1,
+            "reductions": [
+              0
+            ],
+            "remote_accesses": [],
+            "shadow_renews": []
+          }
+        ],
+        "reduction": [
+          {
+            "elements_count": 1,
+            "line": 52,
+            "operation": "min",
+            "reduction_type": "SCALAR",
+            "size_bytes": 4
+          }
+        ],
+        "remote_access": null,
+        "shadow_renew": null
+      },
+      "parallel_execution_fraction": 0.42316258351893093,
+      "sequential_execution_time_sec": 0.0,
+      "launches": [
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0297,
+          "params": {
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0368,
+          "params": {
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0869,
+          "params": {
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0318,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0367,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0914,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0314,
+          "params": {
+            "N": 500,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0376,
+          "params": {
+            "N": 500,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0955,
+          "params": {
+            "N": 500,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0333,
+          "params": {
+            "N": 100,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0374,
+          "params": {
+            "N": 100,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0936,
+          "params": {
+            "N": 100,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0313,
+          "params": {
+            "N": 1000,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.037,
+          "params": {
+            "N": 1000,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0895,
+          "params": {
+            "N": 1000,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0326,
+          "params": {
+            "N": 100,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.038,
+          "params": {
+            "N": 100,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0868,
+          "params": {
+            "N": 100,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0304,
+          "params": {
+            "N": 500,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0375,
+          "params": {
+            "N": 500,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0883,
+          "params": {
+            "N": 500,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0301,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0372,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0937,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0314,
+          "params": {
+            "N": 1000,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0372,
+          "params": {
+            "N": 1000,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0868,
+          "params": {
+            "N": 1000,
+            "NL": 10
+          }
+        }
+      ]
+    }
+  },
+  "acr1102": {
+    "cluster_info": {
+      "cores_per_node": 0,
+      "memory_per_node_gb": 0,
+      "network_bandwidth_gbps": 0,
+      "network_latency_ms": 0,
+      "num_nodes": 0,
+      "threads_per_node": 0
+    },
+    "program_info": {
+      "arrays_info": [
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_17_a"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_17_c"
+        }
+      ],
+      "average_parallel_line_executions": 24.5,
+      "directives": {
+        "across": [
+          {
+            "array_id": 0,
+            "communication_pattern": "NEAREST_NEIGHBOR",
+            "line": 45,
+            "width": [
+              [
+                0,
+                0,
+                1
+              ]
+            ]
+          }
+        ],
+        "distribute": [
+          {
+            "array_id": 0,
+            "distribution_spec": [
+              "BLOCK"
+            ],
+            "line": 21
+          }
+        ],
+        "parallel": [
+          {
+            "acrosses": [],
+            "computational_intensity": 1.0,
+            "iterations_count": [
+              51
+            ],
+            "line": 40,
+            "loops_count": 1,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 0.6666666666666666,
+            "iterations_count": [
+              48
+            ],
+            "line": 45,
+            "loops_count": 1,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": [
+              0
+            ]
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 0.5,
+            "iterations_count": [
+              1
+            ],
+            "line": 50,
+            "loops_count": 1,
+            "reductions": [
+              0
+            ],
+            "remote_accesses": [],
+            "shadow_renews": []
+          }
+        ],
+        "reduction": [
+          {
+            "elements_count": 1,
+            "line": 50,
+            "operation": "min",
+            "reduction_type": "SCALAR",
+            "size_bytes": 4
+          }
+        ],
+        "remote_access": null,
+        "shadow_renew": null
+      },
+      "parallel_execution_fraction": 0.4206008583690987,
+      "sequential_execution_time_sec": 0.0,
+      "launches": [
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0311,
+          "params": {
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0371,
+          "params": {
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0865,
+          "params": {
+            "N": 1000,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0354,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0401,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0968,
+          "params": {
+            "N": 500,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.051,
+          "params": {
+            "N": 500,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.047,
+          "params": {
+            "N": 500,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.4347,
+          "params": {
+            "N": 500,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0445,
+          "params": {
+            "N": 100,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0382,
+          "params": {
+            "N": 100,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.5738,
+          "params": {
+            "N": 100,
+            "NL": 50
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0301,
+          "params": {
+            "N": 1000,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0379,
+          "params": {
+            "N": 1000,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0879,
+          "params": {
+            "N": 1000,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0318,
+          "params": {
+            "N": 100,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0391,
+          "params": {
+            "N": 100,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0858,
+          "params": {
+            "N": 100,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0311,
+          "params": {
+            "N": 500,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0395,
+          "params": {
+            "N": 500,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0863,
+          "params": {
+            "N": 500,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0351,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.1362,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.323,
+          "params": {
+            "N": 100,
+            "NL": 100
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 1,
+          "total_time": 0.0306,
+          "params": {
+            "N": 1000,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            1
+          ],
+          "threads": 2,
+          "total_time": 0.0368,
+          "params": {
+            "N": 1000,
+            "NL": 10
+          }
+        },
+        {
+          "grid": [
+            2
+          ],
+          "threads": 2,
+          "total_time": 0.0908,
+          "params": {
+            "N": 1000,
+            "NL": 10
           }
         }
       ]

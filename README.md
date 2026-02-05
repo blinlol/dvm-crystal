@@ -1,3 +1,19 @@
+# пайплайн сбора данных
+
+1) в auto test
+- разбиваем программу `all/x.fdv` на программы `data/x/x<i>.fdv`
+- проверяем, что все работает с помощью `check_all_programs.sh` и `check_programs.sh`
+2) `cp -r dvm-auto-test/data dvm-crystal-data`
+3) в dvm-crystal-data
+- задаем параметры в param_values.py
+- `python run.py --max-cores <x> --max-threads <y>`
+4) в dvm-crystal
+- проверяем конфиг в `config/data_config.yaml`, значения data_collection.default_source_dir, data_aggregation.results_directory
+- `python main.py collect`
+- `python main.py aggregate`
+- `python main.py features`
+
+
 1) запуск в crystal-data
 2) python main.py collect
 3) python main.py aggregate

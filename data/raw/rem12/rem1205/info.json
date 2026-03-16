@@ -1,0 +1,100 @@
+[
+  {
+    "cluster_info": {
+      "cores_per_node": 0,
+      "memory_per_node_gb": 0,
+      "network_bandwidth_gbps": 0,
+      "network_latency_ms": 0,
+      "num_nodes": 0,
+      "threads_per_node": 0
+    }
+  },
+  {
+    "program_info": {
+      "arrays_info": [
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_19_a"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_19_b"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_19_c"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_19_d"
+        }
+      ],
+      "average_parallel_line_executions": 17.0,
+      "directives": {
+        "across": null,
+        "align": [
+          {
+            "line": 25,
+            "rules": [
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "source_array_id": 0,
+            "target_array_id": 1
+          }
+        ],
+        "distribute": [
+          {
+            "array_id": 1,
+            "distribution_spec": [
+              "*"
+            ],
+            "line": 23
+          }
+        ],
+        "parallel": [
+          {
+            "acrosses": [],
+            "computational_intensity": 1.0,
+            "iterations_count": [
+              17
+            ],
+            "line": 38,
+            "loops_count": 1,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          }
+        ],
+        "reduction": null,
+        "remote_access": null,
+        "shadow_renew": null
+      },
+      "launch_grid": {
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "total_processes": 0
+      },
+      "parallel_execution_fraction": 0.22666666666666666,
+      "sequential_execution_time_sec": 0.0
+    }
+  }
+]

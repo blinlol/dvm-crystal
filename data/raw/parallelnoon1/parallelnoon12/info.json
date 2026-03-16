@@ -1,0 +1,111 @@
+[
+  {
+    "cluster_info": {
+      "cores_per_node": 0,
+      "memory_per_node_gb": 0,
+      "network_bandwidth_gbps": 0,
+      "network_latency_ms": 0,
+      "num_nodes": 0,
+      "threads_per_node": 0
+    }
+  },
+  {
+    "program_info": {
+      "arrays_info": [
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_23_a"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_23_as"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_23_b"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_23_bs"
+        }
+      ],
+      "average_parallel_line_executions": 91.92307692307692,
+      "directives": {
+        "across": null,
+        "parallel": [
+          {
+            "acrosses": [],
+            "computational_intensity": 0.5,
+            "iterations_count": [
+              101
+            ],
+            "line": 45,
+            "loops_count": 1,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 1.0,
+            "iterations_count": [
+              99
+            ],
+            "line": 55,
+            "loops_count": 1,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 0.75,
+            "iterations_count": [
+              99
+            ],
+            "line": 62,
+            "loops_count": 1,
+            "reductions": [
+              0
+            ],
+            "remote_accesses": [],
+            "shadow_renews": []
+          }
+        ],
+        "reduction": [
+          {
+            "elements_count": 1,
+            "line": 62,
+            "operation": "min",
+            "reduction_type": "SCALAR",
+            "size_bytes": 4
+          }
+        ],
+        "remote_access": null,
+        "shadow_renew": null
+      },
+      "launch_grid": {
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "total_processes": 0
+      },
+      "parallel_execution_fraction": 0.495850622406639,
+      "sequential_execution_time_sec": 0.0
+    }
+  }
+]

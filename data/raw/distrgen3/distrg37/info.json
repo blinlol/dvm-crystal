@@ -1,0 +1,300 @@
+[
+  {
+    "cluster_info": {
+      "cores_per_node": 0,
+      "memory_per_node_gb": 0,
+      "network_bandwidth_gbps": 0,
+      "network_latency_ms": 0,
+      "num_nodes": 0,
+      "threads_per_node": 0
+    }
+  },
+  {
+    "program_info": {
+      "arrays_info": [
+        {
+          "dimensions": [
+            3
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_7_psize"
+        },
+        {
+          "dimensions": [
+            3
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_128_psize"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_134_bsi11"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_135_bsi12"
+        },
+        {
+          "dimensions": [
+            2
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_136_bsi21"
+        },
+        {
+          "dimensions": [
+            2
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_137_bsi22"
+        },
+        {
+          "dimensions": [
+            3
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_138_bsi31"
+        },
+        {
+          "dimensions": [
+            3
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_139_bsi32"
+        },
+        {
+          "dimensions": [
+            4
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_140_bsi41"
+        },
+        {
+          "dimensions": [
+            4
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_141_bsi42"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_143_bsj11"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_144_bsj12"
+        },
+        {
+          "dimensions": [
+            2
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_145_bsj21"
+        },
+        {
+          "dimensions": [
+            2
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_146_bsj22"
+        },
+        {
+          "dimensions": [
+            3
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_147_bsj31"
+        },
+        {
+          "dimensions": [
+            3
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_148_bsj32"
+        },
+        {
+          "dimensions": [
+            4
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_149_bsj41"
+        },
+        {
+          "dimensions": [
+            4
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_150_bsj42"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_152_bsk11"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_153_bsk12"
+        },
+        {
+          "dimensions": [
+            2
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_154_bsk21"
+        },
+        {
+          "dimensions": [
+            2
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_155_bsk22"
+        },
+        {
+          "dimensions": [
+            3
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_156_bsk31"
+        },
+        {
+          "dimensions": [
+            3
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_157_bsk32"
+        },
+        {
+          "dimensions": [
+            4
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_158_bsk41"
+        },
+        {
+          "dimensions": [
+            4
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_159_bsk42"
+        },
+        {
+          "dimensions": [
+            1,
+            1,
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_161_a3"
+        }
+      ],
+      "average_parallel_line_executions": 1291.1851851851852,
+      "directives": {
+        "across": null,
+        "distribute": [
+          {
+            "array_id": 26,
+            "line": 164
+          }
+        ],
+        "parallel": [
+          {
+            "acrosses": [],
+            "computational_intensity": 6.0,
+            "iterations_count": [
+              5,
+              14,
+              14
+            ],
+            "line": 254,
+            "loops_count": 3,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 0.5,
+            "iterations_count": [
+              11,
+              14,
+              14
+            ],
+            "line": 284,
+            "loops_count": 3,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 0.5,
+            "iterations_count": [
+              11,
+              14,
+              14
+            ],
+            "line": 374,
+            "loops_count": 3,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 4.666666666666667,
+            "iterations_count": [
+              11,
+              14,
+              14
+            ],
+            "line": 450,
+            "loops_count": 3,
+            "reductions": [
+              0
+            ],
+            "remote_accesses": [],
+            "shadow_renews": []
+          }
+        ],
+        "reduction": [
+          {
+            "elements_count": 1,
+            "line": 450,
+            "operation": "min",
+            "reduction_type": "SCALAR",
+            "size_bytes": 4
+          }
+        ],
+        "remote_access": null,
+        "shadow_renew": null
+      },
+      "launch_grid": {
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "total_processes": 0
+      },
+      "parallel_execution_fraction": 0.9992261171142767,
+      "sequential_execution_time_sec": 0.0
+    }
+  }
+]

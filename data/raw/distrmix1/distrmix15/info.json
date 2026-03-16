@@ -1,0 +1,141 @@
+[
+  {
+    "cluster_info": {
+      "cores_per_node": 0,
+      "memory_per_node_gb": 0,
+      "network_bandwidth_gbps": 0,
+      "network_latency_ms": 0,
+      "num_nodes": 0,
+      "threads_per_node": 0
+    }
+  },
+  {
+    "program_info": {
+      "arrays_info": [
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_57_bs1"
+        },
+        {
+          "dimensions": [
+            2
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_58_bs2"
+        },
+        {
+          "dimensions": [
+            3
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_59_bs3"
+        },
+        {
+          "dimensions": [
+            4
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_60_bs4"
+        },
+        {
+          "dimensions": [
+            6
+          ],
+          "element_size_bytes": 8,
+          "name": "f0_62_wb1"
+        },
+        {
+          "dimensions": [
+            5
+          ],
+          "element_size_bytes": 8,
+          "name": "f0_63_wb2"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_65_a1"
+        }
+      ],
+      "average_parallel_line_executions": 9.625,
+      "directives": {
+        "across": null,
+        "distribute": [
+          {
+            "array_id": 6,
+            "distribution_spec": [
+              "WGT_BLOCK(wb1,6)"
+            ],
+            "line": 68
+          }
+        ],
+        "parallel": [
+          {
+            "acrosses": [],
+            "computational_intensity": 0.0,
+            "iterations_count": [
+              11
+            ],
+            "line": 76,
+            "loops_count": 1,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 0.3333333333333333,
+            "iterations_count": [
+              11
+            ],
+            "line": 96,
+            "loops_count": 1,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 2.0,
+            "iterations_count": [
+              11
+            ],
+            "line": 107,
+            "loops_count": 1,
+            "reductions": [
+              0
+            ],
+            "remote_accesses": [],
+            "shadow_renews": []
+          }
+        ],
+        "reduction": [
+          {
+            "elements_count": 1,
+            "line": 107,
+            "operation": "min",
+            "reduction_type": "SCALAR",
+            "size_bytes": 4
+          }
+        ],
+        "remote_access": null,
+        "shadow_renew": null
+      },
+      "launch_grid": {
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "total_processes": 0
+      },
+      "parallel_execution_fraction": 0.652542372881356,
+      "sequential_execution_time_sec": 0.0
+    }
+  }
+]

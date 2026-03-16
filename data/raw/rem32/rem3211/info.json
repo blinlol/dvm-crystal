@@ -1,0 +1,159 @@
+[
+  {
+    "cluster_info": {
+      "cores_per_node": 0,
+      "memory_per_node_gb": 0,
+      "network_bandwidth_gbps": 0,
+      "network_latency_ms": 0,
+      "num_nodes": 0,
+      "threads_per_node": 0
+    }
+  },
+  {
+    "program_info": {
+      "arrays_info": [
+        {
+          "dimensions": [
+            1,
+            1,
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_17_a"
+        },
+        {
+          "dimensions": [
+            1,
+            1,
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_17_b"
+        },
+        {
+          "dimensions": [
+            1,
+            1,
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_17_c"
+        },
+        {
+          "dimensions": [
+            1,
+            1,
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_17_d"
+        }
+      ],
+      "average_parallel_line_executions": 52.90909090909091,
+      "directives": {
+        "across": null,
+        "align": [
+          {
+            "line": 22,
+            "source_array_id": 1,
+            "target_array_id": 0
+          }
+        ],
+        "distribute": [
+          {
+            "array_id": 0,
+            "distribution_spec": [
+              "BLOCK",
+              "*",
+              "BLOCK"
+            ],
+            "line": 21
+          }
+        ],
+        "parallel": [
+          {
+            "acrosses": [],
+            "computational_intensity": 3.0,
+            "iterations_count": [
+              -9,
+              4,
+              4
+            ],
+            "line": 37,
+            "loops_count": 3,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 0.0,
+            "iterations_count": [
+              1,
+              4,
+              4
+            ],
+            "line": 46,
+            "loops_count": 3,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 1.5,
+            "iterations_count": [
+              0,
+              1,
+              1
+            ],
+            "line": 55,
+            "loops_count": 3,
+            "reductions": [
+              0,
+              1,
+              2
+            ],
+            "remote_accesses": [],
+            "shadow_renews": []
+          }
+        ],
+        "reduction": [
+          {
+            "elements_count": 1,
+            "line": 55,
+            "operation": "min",
+            "reduction_type": "SCALAR",
+            "size_bytes": 4
+          },
+          {
+            "elements_count": 1,
+            "line": 55,
+            "operation": "min",
+            "reduction_type": "SCALAR",
+            "size_bytes": 4
+          },
+          {
+            "elements_count": 1,
+            "line": 55,
+            "operation": "min",
+            "reduction_type": "SCALAR",
+            "size_bytes": 4
+          }
+        ],
+        "remote_access": null,
+        "shadow_renew": null
+      },
+      "launch_grid": {
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "total_processes": 0
+      },
+      "parallel_execution_fraction": 0.9548810500410172,
+      "sequential_execution_time_sec": 0.0
+    }
+  }
+]

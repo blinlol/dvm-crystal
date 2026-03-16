@@ -1,0 +1,91 @@
+[
+  {
+    "cluster_info": {
+      "cores_per_node": 0,
+      "memory_per_node_gb": 0,
+      "network_bandwidth_gbps": 0,
+      "network_latency_ms": 0,
+      "num_nodes": 0,
+      "threads_per_node": 0
+    }
+  },
+  {
+    "program_info": {
+      "arrays_info": [
+        {
+          "dimensions": [
+            1,
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_67_a2"
+        }
+      ],
+      "average_parallel_line_executions": 456.3,
+      "directives": {
+        "across": null,
+        "distribute": [
+          {
+            "array_id": 0,
+            "distribution_spec": [
+              "MULT_BLOCK(m1)",
+              "MULT_BLOCK(m2)"
+            ],
+            "line": 70
+          }
+        ],
+        "parallel": [
+          {
+            "acrosses": [],
+            "computational_intensity": 2.0,
+            "iterations_count": [
+              50,
+              12
+            ],
+            "line": 82,
+            "loops_count": 2,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 6.0,
+            "iterations_count": [
+              1,
+              12
+            ],
+            "line": 95,
+            "loops_count": 2,
+            "reductions": [
+              0
+            ],
+            "remote_accesses": [],
+            "shadow_renews": []
+          }
+        ],
+        "reduction": [
+          {
+            "elements_count": 1,
+            "line": 95,
+            "operation": "min",
+            "reduction_type": "SCALAR",
+            "size_bytes": 4
+          }
+        ],
+        "remote_access": null,
+        "shadow_renew": null
+      },
+      "launch_grid": {
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "total_processes": 0
+      },
+      "parallel_execution_fraction": 0.9698193411264612,
+      "sequential_execution_time_sec": 0.0
+    }
+  }
+]

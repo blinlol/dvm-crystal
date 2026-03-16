@@ -1,0 +1,226 @@
+[
+  {
+    "cluster_info": {
+      "cores_per_node": 0,
+      "memory_per_node_gb": 0,
+      "network_bandwidth_gbps": 0,
+      "network_latency_ms": 0,
+      "num_nodes": 0,
+      "threads_per_node": 0
+    }
+  },
+  {
+    "program_info": {
+      "arrays_info": [
+        {
+          "dimensions": [
+            2
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_7_psize"
+        },
+        {
+          "dimensions": [
+            2
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_54_psize"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_60_bsi11"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_61_bsi12"
+        },
+        {
+          "dimensions": [
+            2
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_62_bsi21"
+        },
+        {
+          "dimensions": [
+            2
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_63_bsi22"
+        },
+        {
+          "dimensions": [
+            3
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_64_bsi31"
+        },
+        {
+          "dimensions": [
+            3
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_65_bsi32"
+        },
+        {
+          "dimensions": [
+            4
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_66_bsi41"
+        },
+        {
+          "dimensions": [
+            4
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_67_bsi42"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_69_bsj11"
+        },
+        {
+          "dimensions": [
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_70_bsj12"
+        },
+        {
+          "dimensions": [
+            2
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_71_bsj21"
+        },
+        {
+          "dimensions": [
+            2
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_72_bsj22"
+        },
+        {
+          "dimensions": [
+            3
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_73_bsj31"
+        },
+        {
+          "dimensions": [
+            3
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_74_bsj32"
+        },
+        {
+          "dimensions": [
+            4
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_75_bsj41"
+        },
+        {
+          "dimensions": [
+            4
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_76_bsj42"
+        },
+        {
+          "dimensions": [
+            1,
+            1
+          ],
+          "element_size_bytes": 4,
+          "name": "f0_78_a2"
+        }
+      ],
+      "average_parallel_line_executions": 131.13333333333333,
+      "directives": {
+        "across": null,
+        "distribute": [
+          {
+            "array_id": 18,
+            "line": 81
+          }
+        ],
+        "parallel": [
+          {
+            "acrosses": [],
+            "computational_intensity": 1.5,
+            "iterations_count": [
+              0,
+              14
+            ],
+            "line": 111,
+            "loops_count": 2,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 0.5,
+            "iterations_count": [
+              12,
+              14
+            ],
+            "line": 136,
+            "loops_count": 2,
+            "reductions": [],
+            "remote_accesses": [],
+            "shadow_renews": []
+          },
+          {
+            "acrosses": [],
+            "computational_intensity": 2.6666666666666665,
+            "iterations_count": [
+              -12,
+              14
+            ],
+            "line": 163,
+            "loops_count": 2,
+            "reductions": [
+              0
+            ],
+            "remote_accesses": [],
+            "shadow_renews": []
+          }
+        ],
+        "reduction": [
+          {
+            "elements_count": 1,
+            "line": 163,
+            "operation": "min",
+            "reduction_type": "SCALAR",
+            "size_bytes": 4
+          }
+        ],
+        "remote_access": null,
+        "shadow_renew": null
+      },
+      "launch_grid": {
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "total_processes": 0
+      },
+      "parallel_execution_fraction": 0.8908514492753623,
+      "sequential_execution_time_sec": 0.0
+    }
+  }
+]

@@ -35,5 +35,5 @@ data_collection:
 
 data_aggregation:
   cover_directory: './data/raw'
-  results_directory: '../dvm-crystal-data/results'
+  results_directory: '../dvm-results/results'
   output_directory: './data/processed'

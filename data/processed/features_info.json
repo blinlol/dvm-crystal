@@ -129,9 +129,9 @@
     "normalized_parallel_time": "float64"
   },
   "dataset_shape": [
-    30648,
+    226097,
     61
   ],
-  "programs_count": 716,
-  "launches_count": 30648
+  "programs_count": 256,
+  "launches_count": 226097
 }

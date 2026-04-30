@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import logging
 import yaml
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Optional
 import os
 import json
 
@@ -287,20 +287,24 @@ class DVMHFeatureSpaceCreator:
         
         return features
     
-    def calculate_speedup(self, sequential_time: float, parallel_time: float) -> float:
+    def calculate_speedup(self, baseline_time: Optional[float], parallel_time: Optional[float]) -> float:
         """
         Вычисление ускорения
         
         Args:
-            sequential_time: Время последовательного выполнения
+            baseline_time: Базовое время выполнения (1 процесс, 1 поток)
             parallel_time: Время параллельного выполнения
             
         Returns:
             float: Ускорение
         """
-        if parallel_time == 0 or sequential_time == 0:
-            return 0.0
-        return sequential_time / parallel_time
+        if baseline_time is None or parallel_time is None:
+            return np.nan
+        if pd.isna(baseline_time) or pd.isna(parallel_time):
+            return np.nan
+        if baseline_time <= 0 or parallel_time <= 0:
+            return np.nan
+        return baseline_time / parallel_time
     
     def create_feature_space(self, data: Dict, program_name: str) -> pd.DataFrame:
         """
@@ -329,20 +333,29 @@ class DVMHFeatureSpaceCreator:
         
         rows = []
 
-        # Определяем последовательное время как запуск на 1 потоке и 1 процессоре
-        sequential_candidates = []
+        # Базовое время: запуск с 1 процессом и 1 потоком
+        baseline_candidates = []
         for launch in launches:
             grid = launch.get('grid', [])
             threads = launch.get('threads', 0)
-            if threads == 1 and grid and all(g == 1 for g in grid):
-                sequential_candidates.append(launch.get('total_time', 0))
+            launch_time = launch.get('total_time', None)
 
-        if sequential_candidates:
-            sequential_time = min(sequential_candidates)
+            launch_features = self.extract_launch_configuration_features(grid, threads)
+            is_baseline = (
+                launch_features.get('launch_total_processors', 0) == 1
+                and launch_features.get('launch_threads', 0) == 1
+            )
+
+            if is_baseline and launch_time is not None and launch_time > 0:
+                baseline_candidates.append(launch_time)
+
+        if baseline_candidates:
+            baseline_time = float(np.median(baseline_candidates))
         else:
-            sequential_time = static_features['sequential_execution_time']
+            baseline_time = np.nan
             self.logger.warning(
-                "Не найден запуск с grid=1 и threads=1, используется sequential_execution_time"
+                "Не найден валидный baseline запуск с 1 процессом и 1 потоком для %s",
+                program_name
             )
         
         # Обрабатываем каждый запуск
@@ -356,7 +369,7 @@ class DVMHFeatureSpaceCreator:
             row.update(self.extract_launch_configuration_features(grid, threads))
             
             # Добавляем целевые переменные
-            row['target_speedup'] = self.calculate_speedup(sequential_time, parallel_time)
+            row['target_speedup'] = self.calculate_speedup(baseline_time, parallel_time)
             row['parallel_execution_time'] = parallel_time
             
             # Добавляем метаданные
@@ -396,7 +409,11 @@ class DVMHFeatureSpaceCreator:
         final_df = pd.concat(all_datasets, ignore_index=True)
         
         # Добавляем дополнительные вычисляемые признаки
-        final_df['normalized_parallel_time'] = final_df['parallel_execution_time'] / final_df['sequential_execution_time']
+        final_df['normalized_parallel_time'] = np.where(
+            final_df['sequential_execution_time'] > 0,
+            final_df['parallel_execution_time'] / final_df['sequential_execution_time'],
+            np.nan
+        )
         
         # Валидация данных
         self._validate_dataset(final_df)
